@@ -21,3 +21,13 @@
 into Unsloth (Han & Han, 2025) or Axolotl (Axolotl, 2025) for further fine-tuning, perform quantization using bitsandbytes (Dettmers et al., 2022) before finally serving the model
 using llama.cpp (GGML, 2025). In each step, the user may need to manually convert the model format (e.g. from HuggingFace’s safetensors to GGUF in llama.cpp), and the
 quantization schemes may diverge from the ones used in previous steps with subtle discrepancies
+
+## Some subtle mistakes
+1. If you are on a shared clusters (servers), you should be careful and ensure every step you follow is correct. Do not ASSUME anything
+    - For example, I set up a conda environment and installed all required packages.
+    - I then used `ipython` for initial experimentation (that is the only option I have due to security concerns).
+    - Everything was running smoothly, so I didn't doubt anything.
+    - One day, the code threw an error. I spent half a day going through the documentation to fix it.
+    - Nothing worked!
+    - Finally, I realiszd, I didn't install `ipython` at all in `my environment`, therefore, it used the `ipython` from the base environment (sic!)
+    - The base environment has a different PyTorch version than I intended!
