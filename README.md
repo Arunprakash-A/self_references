@@ -10,7 +10,9 @@
 ## Papers
 1. [Emergent Abilities of Large Language Models](https://arxiv.org/pdf/2206.07682)
     - Comment: What really happens when we scale the model? In-context learning ( great sample efficiency) is a commonly known ability.
-    - Going through the paper gives us deeper insights (say, we can sense that **test-time scaling** is worth trying (back in 2022) without even using our compute)
+    - Going through the paper gives us even more deeper insights
+       - In 2022, many people noticed the advantage of scaling the model parameters, however, one could have also noticed that scaling the FLOPS (compute) also help the model. 
+       - This is now called **test-time scaling** (Scaling the FLOPS)
     - The quote "Emergence is when _quantitative_ changes in a system result in _qualitative_ changes in behaviour" cited in the paper deeply resonates with me
 2. [TorchAO: PyTorch-Native Training-to-Serving Model Optimization](https://openreview.net/attachment?id=HpqH0JakHf&name=pdf)
     - Comment: The end-to-end optimization of the LLM pipeline (training-finetuning-serving) was fragmented. This framework exactly addresses this major problem.
