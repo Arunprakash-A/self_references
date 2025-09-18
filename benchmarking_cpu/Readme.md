@@ -1,4 +1,6 @@
 # Benchmark the inference performance of small language models (size 1B to 4B) on CPU, GPU and OpenVINO
+
+## My Experiment
 * Model: google/gemma-2b
 * Input tokens: 13
 * Max new tokens: 128
@@ -72,3 +74,5 @@ Latency total (s): [5.994, 3.9013, 3.7612, 4.7523, 3.6536]
 Throughput (tok/s): [21.35, 32.81, 34.03, 26.93, 35.03]
 Generated tokens: [128, 128, 128, 128, 128]
 ```
+## Other Resources
+1. [TorchAO](https://pytorch.org/blog/high-performance-quantized-llm-inference-on-intel-cpus-with-native-pytorch/) native support to Intel Xeon (6) CPUs
