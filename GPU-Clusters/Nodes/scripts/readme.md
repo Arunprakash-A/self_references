@@ -1,6 +1,20 @@
+## Basics of SLURM
+1. `sinfo` #show available partitions and node status
+    - `{PARTITION:defq*, AVAIL:up,  TIMELIMIT:infinite,   NODES:4 ,  STATE:mix, NODELIST:iitmadras[001,003-004,006]}`
+2. `squeue` #list running and queued jobs
+   - <img width="635" height="128" alt="image" src="https://github.com/user-attachments/assets/c587d7cb-90f1-4510-a4e7-9c7dc8fba2d8" />
+3. `scontrol show node` # details info like node-address, node-hostname, gres/gpu-8, 
+
+                   
 ## Best Practices
-- Never use `nn.DataParallel` even if your node has only 2 GPUs
-- Do a **smoke test** to ensure there is no memory fragmentation in GPU (so that you can use the available memory optimally)
+- For shared login (i.e, a single login used by multiple people from the project team)
+   - Always set up a separate conda environment for each project
+   - Use `tmux new -s session_name` with `yourname_task` as a session name to avoid potential conflicts
+   - Use `unset HISTFILE` to disable storing the command history of the current bash shell so that it doesn't appear in the command history when other team members log into the account. 
+   - Always move the unused `.cache` file to a temporary location to reduce the load on `/home`
+   - Store your data and scripts in `scratch (projects)/data/team/user_name/`
+- Never use `nn.DataParallel` even if you use only 2 GPUs from a node (`--gres=gpu:2`)
+- Do a **smoke test** to ensure there is no memory fragmentation in the GPU (so that you can use the available memory optimally)
 - For DDP, FSDP, always do a **dry-run** with a small batch of samples and 
    - check proper Gradient Synchronisation
    - Profile GPU and CPU utilisation
