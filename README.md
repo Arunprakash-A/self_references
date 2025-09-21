@@ -31,3 +31,5 @@ quantization schemes may diverge from the ones used in previous steps with subtl
     - Nothing worked!
     - Finally, I realiszd, I didn't install `ipython` at all in `my environment`, therefore, it used the `ipython` from the base environment (sic!)
     - The base environment has a different PyTorch version than I intended!
+2. Sometimes the issue is not related to your code. However, you encounter errors related to the CUDA driver (especially on shared clusters).
+    - Attempt clearing the cache directory (`.cache/torch/kernels`) as discussed [here](https://discuss.pytorch.org/t/torch-prod-produces-runtimeerror-cuda-driver-error-invalid-argument/179054/29)
