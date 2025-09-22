@@ -6,6 +6,10 @@
 
 - [Documentation](https://docs.nvidia.com/deploy/nvidia-smi/index.html) for advanced usage
 - `nvidia-smi --query-compute-apps=pid,process_name,used_gpu_memory --format=csv`
+- For continuous monitoring: `nvidia-smi --query-gpu=timestamp,index,name,power.draw,power.limit,utilization.gpu,utilization.memory,memory.used --format=csv -l 1` 
+  <img width="500" height="361" alt="image" src="https://github.com/user-attachments/assets/0b15d4a1-a7cc-46f5-bd9a-b6ad26b3041d" />
+- The best approach to monitor GPU-related quantities is to log them using experiment monitoring tools such as `wandb` 
+
 
 ## Useful Packages
  - [gpustat](https://pypi.org/project/gpustat/)
