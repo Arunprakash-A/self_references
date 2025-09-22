@@ -4,7 +4,7 @@
 1. [MegaKernel](https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles)
     - Comment: If we can fuse a single attention module, why not fuse the entire model to get low latency?
 ## Mixed Precision training
-1. Users **should not** manually cast their model or data to bf16
+1. Users **should not** manually cast their model or data to bf16, always safe to first use `amp.autocast`
 2. [Best practices guide](https://github.com/NVIDIA/apex/tree/master/examples/imagenet)
 
 ## Papers
@@ -21,7 +21,24 @@
 into Unsloth (Han & Han, 2025) or Axolotl (Axolotl, 2025) for further fine-tuning, perform quantization using bitsandbytes (Dettmers et al., 2022) before finally serving the model
 using llama.cpp (GGML, 2025). In each step, the user may need to manually convert the model format (e.g. from HuggingFace’s safetensors to GGUF in llama.cpp), and the
 quantization schemes may diverge from the ones used in previous steps with subtle discrepancies
-
+## Best practices
+1. **On Training:**
+    - Save checkpoints with all intermediate informations, including the current `epoch`, so we can stop and resume training without breaking epoch numbers.
+    - This avoids many subtle errors while generating final figures.
+    - ```python
+      save_checkpoint({
+                "epoch": epoch,
+                "model": model.state_dict(),
+                "optimizer": optimizer.state_dict(),
+                "scaler": scaler.state_dict(), #
+                "best_val_loss": best_val_loss,
+                "best_val_acc": best_val_acc,
+                "class_to_idx": class_to_idx,
+                "num_classes": num_classes,
+                "args": vars(args),
+            }, best_ckpt)
+      ```
+      
 ## Some subtle mistakes 
 1. If you are on a shared cluster (servers), you should be careful and ensure every step you follow is correct. Do not ASSUME anything
     - For example, I set up a conda environment and installed all required packages.
