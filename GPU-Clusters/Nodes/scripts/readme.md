@@ -41,7 +41,7 @@ Table for command 2
 - Run the model on the entire dataset only if the dry-run is successful
 
 ## CUDA Errors
-1. Set "cuda:7" in a torch.device("cuda:7"), forgetting that you are now running on a single GPU!
+1. Invalid Device Ordinal (forgot to modify "cuda:7" in a torch.device("cuda:7"), forgetting that you are now running on a single GPU!)    
     - torch.AcceleratorError: CUDA error: invalid **device ordinal**
    CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
    For debugging consider passing CUDA_LAUNCH_BLOCKING=1
