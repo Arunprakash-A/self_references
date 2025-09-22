@@ -38,6 +38,10 @@ quantization schemes may diverge from the ones used in previous steps with subtl
                 "args": vars(args),
             }, best_ckpt)
       ```
+ 2. What if the model underperforms?
+     - Keep the batch size  small during the initial iterations and increase the size as the iterations increase (adjust warm-up lr accordingly)
+     - Use hooks to debug the gradients, activation distribution. If you are using DDP, try dynamic tanh activation by removing batch/layer normalisation and see if the model performance improves
+     - In LLMs, you may also vary the beam size while dealing with reasoning models. For example, page 6 in [the paper](https://arxiv.org/pdf/2103.03874)
       
 ## Some subtle mistakes 
 1. If you are on a shared cluster (servers), you should be careful and ensure every step you follow is correct. Do not ASSUME anything
