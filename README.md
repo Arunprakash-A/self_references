@@ -22,11 +22,11 @@ into Unsloth (Han & Han, 2025) or Axolotl (Axolotl, 2025) for further fine-tunin
 using llama.cpp (GGML, 2025). In each step, the user may need to manually convert the model format (e.g. from HuggingFace’s safetensors to GGUF in llama.cpp), and the
 quantization schemes may diverge from the ones used in previous steps with subtle discrepancies
 
-3. [Solving Math Word Problems](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1184/reports/6866023.pdf)
+3. [Solving Math Word Problems](https://aclanthology.org/D17-1088.pdf)
     - **Comment:** Reasoning models are not just for solving complex mathematical equations, it is a foundational skill that enables the adoptation of LLMs in many areas which requires strong reasoning to make decisions.
-    - From the paper: Math word problems form a natural abstraction to a range of quantitative reasoning skills that are often required of an autonomous agent to behave intelligently, such as understanding
+    - Math word problems form a natural abstraction to a range of quantitative reasoning skills that are often required of an autonomous agent to behave intelligently, such as understanding
 financial news, calculating change in everyday transactions, and analyzing productivity in an organization. Solving such problems remains a key challenge for artificial intelligence (AI)
-today, as they involve recognizing how goals, entities and quantities in the real-world map into a mathematical formalization.
+today, as they involve recognizing how goals, entities and quantities in the real-world map into a mathematical formalization - [source](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1184/reports/6866023.pdf)).
 
 ## Blogs
 1. [Deep Learning Is Hitting a Wall](https://nautil.us/deep-learning-is-hitting-a-wall-238440/)
