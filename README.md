@@ -21,6 +21,9 @@
 into Unsloth (Han & Han, 2025) or Axolotl (Axolotl, 2025) for further fine-tuning, perform quantization using bitsandbytes (Dettmers et al., 2022) before finally serving the model
 using llama.cpp (GGML, 2025). In each step, the user may need to manually convert the model format (e.g. from HuggingFace’s safetensors to GGUF in llama.cpp), and the
 quantization schemes may diverge from the ones used in previous steps with subtle discrepancies
+
+## Blogs
+1. [Deep Learning Is Hitting a Wall](https://nautil.us/deep-learning-is-hitting-a-wall-238440/)
 ## Best practices
 1. **On Training:**
     - Save checkpoints with all intermediate informations, including the current `epoch`, so we can stop and resume training without breaking epoch numbers.
