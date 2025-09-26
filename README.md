@@ -37,7 +37,8 @@ financial news, calculating change in everyday transactions, and analyzing produ
 today, as they involve recognizing how goals, entities and quantities in the real-world map into a mathematical formalization - [source](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1184/reports/6866023.pdf)).
 
 ## Blogs
-1. [Deep Learning Is Hitting a Wall](https://nautil.us/deep-learning-is-hitting-a-wall-238440/)
+1. [Deep Learning Is Hitting a Wall](https://nautil.us/deep-learning-is-hitting-a-wall-238440/) - 2022
+   - [Tweet](https://x.com/karpathy/status/1971220449515516391) by Andrej Karpathy related to the article - 2025
 ## Best practices
 1. **On Training:**
     - Save checkpoints with all intermediate informations, including the current `epoch`, so we can stop and resume training without breaking epoch numbers.
