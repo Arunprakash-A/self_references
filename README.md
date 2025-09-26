@@ -1,6 +1,7 @@
 # Documenting learnings, ideas, interesting-insightful-helpful papers, blogs and scripts (for myself and the curious minds like you)
 ## Books 
 1. [PATTERNS, PREDICTIONS, AND ACTIONS A story about machine learning](https://mlstory.org/pdf/patterns.pdf)
+   - Surprised to learn the story behind the modern concept sitting at the centre of RL:'sum of expected discounted rewards`
    
 
 ## Cool Ideas
