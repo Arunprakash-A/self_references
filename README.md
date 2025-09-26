@@ -7,6 +7,11 @@
 1. Users **should not** manually cast their model or data to bf16, always safe to first use `amp.autocast`
 2. [Best practices guide](https://github.com/NVIDIA/apex/tree/master/examples/imagenet)
 
+## Reinforcement Learning
+1. [Understanding Reinforcement Learning for Model Training,and future directions with GRAPE](https://arxiv.org/pdf/2509.04501)
+   - Comment: Good read for anyone who has a good knowledge of LLM and wants to learn the role of RL algorithms
+
+
 ## Papers
 1. [Emergent Abilities of Large Language Models](https://arxiv.org/pdf/2206.07682)
     - **Comment:** What really happens when we scale the model? Some abilities emerges. In-context learning ( great sample efficiency) is a commonly known ability.
