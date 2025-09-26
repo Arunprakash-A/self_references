@@ -1,4 +1,7 @@
 # Documenting learnings, ideas, interesting-insightful-helpful papers, blogs and scripts (for myself and the curious minds like you)
+## Books 
+1. [PATTERNS, PREDICTIONS, AND ACTIONS A story about machine learning](https://mlstory.org/pdf/patterns.pdf)
+   
 
 ## Cool Ideas
 1. [MegaKernel](https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles)
