@@ -64,8 +64,11 @@ today, as they involve recognizing how goals, entities and quantities in the rea
      - Use hooks to debug the gradients, activation distribution. If you are using DDP, try dynamic tanh activation by removing batch/layer normalisation and see if the model performance improves
      - In LLMs, you may also vary the beam size while dealing with reasoning models. For example, page 6 in [the paper](https://arxiv.org/pdf/2103.03874)
       
-## Some subtle mistakes 
-1. If you are on a shared cluster (servers), you should be careful and ensure every step you follow is correct. Do not ASSUME anything
+## Setup Instructions to avoid subtle mistakes in the shared cluster and/or logins
+1. After setting up the conda environment and activating it
+    - Check the `which python` and ensure it is pointing to the current environment
+    - Use `python -m pip install torch torchvision torchaudio` that safely uses the `pip` package from the current environment not from other existing environments by mistake.
+3. If you are on a shared cluster (servers), you should be careful and ensure every step you follow is correct. Do not ASSUME anything
     - For example, I set up a conda environment and installed all required packages.
     - I then used `ipython` for initial experimentation (that is the only option I have due to security concerns).
     - Everything was running smoothly, so I didn't doubt anything.
@@ -73,5 +76,5 @@ today, as they involve recognizing how goals, entities and quantities in the rea
     - Nothing worked!
     - Finally, I realiszd, I didn't install `ipython` at all in `my environment`, therefore, it used the `ipython` from the base environment (sic!)
     - The base environment has a different PyTorch version than I intended!
-2. Sometimes the issue is not related to your code. However, you encounter errors related to the CUDA driver (especially on shared clusters).
+4. Sometimes the issue is not related to your code. However, you encounter errors related to the CUDA driver (especially on shared clusters).
     - Attempt clearing the cache directory (`.cache/torch/kernels`) as discussed [here](https://discuss.pytorch.org/t/torch-prod-produces-runtimeerror-cuda-driver-error-invalid-argument/179054/29)
