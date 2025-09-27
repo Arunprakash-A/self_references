@@ -31,7 +31,7 @@ Table for command 2
     - Always check `squeue -u llmteam` or filter `squeue -u llmteam | grep arun` before submitting a new job.
     - Estimate the memory requirement to train (eval) the model and use `--gres=gpu:X` only for the number of GPUs you need (don’t lock all 8 unless required)
     - Same goes for time `#SBATCH --time=02:00:00`. Always use model checkpointing so that we can release the resources for other immediate projects if required.
-    - Use `scancel <job_id>` instead of `kill`
+    - Use `scancel <job_id>` instead of `kill` (Note down the Jobid for future reference)
 - Never use `nn.DataParallel` even if you use only 2 GPUs from a node (`--gres=gpu:2`)
 - Do a **smoke test** to ensure there is no memory fragmentation in the GPU (so that you can use the available memory optimally)
 - For DDP, FSDP, always do a **dry-run** with a small batch of samples and 
