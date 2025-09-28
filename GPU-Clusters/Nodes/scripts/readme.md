@@ -16,8 +16,40 @@ Table for command 2
    
 4. `scontrol show node` # details info like node-address, node-hostname, gres/gpu-8,
 5. `srun ` for running a task 
-
-                   
+## Submitting and cancelling Job
+* `sbatch train_job.slurm`
+  - prints "submitted job with jobid 21454"
+* To see the details of the job  `scontrol show job 21454`
+    ```
+     JobId=21454 JobName=arun_test_ao
+       UserId=llmteam(1005) GroupId=llmteam(1005) MCS_label=N/A
+       Priority=4294901671 Nice=0 Account=(null) QOS=normal
+       JobState=PENDING Reason=Resources Dependency=(null)
+       Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+       RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A
+       SubmitTime=2025-09-28T11:34:30 EligibleTime=2025-09-28T11:34:30
+       AccrueTime=2025-09-28T11:34:30
+       StartTime=2026-09-22T13:43:14 EndTime=2026-09-22T14:43:14 Deadline=N/A
+       SuspendTime=None SecsPreSuspend=0 LastSchedEval=2025-09-28T11:44:50 Scheduler=Main
+       Partition=defq AllocNode:Sid=iitmadras-login:4116585
+       ReqNodeList=iitmadras001 ExcNodeList=(null)
+       NodeList=
+       NumNodes=1-1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+       ReqTRES=cpu=8,mem=80G,node=1,billing=8,gres/gpu=4
+       AllocTRES=(null)
+       Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+       MinCPUsNode=8 MinMemoryNode=80G MinTmpDiskNode=0
+       Features=(null) DelayBoot=00:00:00
+       OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+       Command=/projects/data/llmteam/arun/train_job.slurm
+       WorkDir=/projects/data/llmteam/arun
+       StdErr=/projects/data/llmteam/arun/logs/arun_test_ao_21454_%N_%t.err
+       StdIn=/dev/null
+       StdOut=/projects/data/llmteam/arun/logs/arun_test_ao_21454_%N_%t.log
+       Power=
+       TresPerNode=gres:gpu:4
+     ```
+  * Cancelling the job `scancel 21454`         
 ## Best Practices
 - For shared login (i.e, a single login used by multiple people from the project team)
    - Always set up a separate conda environment for each project
