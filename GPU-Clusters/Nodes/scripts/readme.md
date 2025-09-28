@@ -16,7 +16,7 @@ Table for command 2
    
 4. `scontrol show node` # details info like node-address, node-hostname, gres/gpu-8,
 5. `srun ` for running a task 
-## Submitting and cancelling Job
+## Submitting and cancelling Jobs
 * `sbatch train_job.slurm`
   - prints "submitted job with jobid 21454"
 * To see the details of the job  `scontrol show job 21454`
@@ -65,6 +65,7 @@ Table for command 2
     - Same goes for time `#SBATCH --time=02:00:00`. Always use model checkpointing so that we can release the resources for other immediate projects if required.
     - Use `scancel <job_id>` instead of `kill` (Note down the Jobid for future reference)
 - Never use `nn.DataParallel` even if you use only 2 GPUs from a node (`--gres=gpu:2`)
+- ALWAYS load checkpoint in **rank-0** GPU, it broadcasts the state_dict to all other ranks
 - Do a **smoke test** to ensure there is no memory fragmentation in the GPU (so that you can use the available memory optimally)
 - For DDP, FSDP, always do a **dry-run** with a small batch of samples and 
    - check proper Gradient Synchronisation
