@@ -1,44 +1,18 @@
 #!/bin/bash
-#SBATCH --job-name=ddp-torchrun-job     # Job name
-#SBATCH --nodes=3                       # Number of nodes
-#SBATCH --ntasks-per-node=8             # One task per GPU
-#SBATCH --gpus-per-node=8               # GPUs per node
-#SBATCH --time=12:00:00                 # Walltime (HH:MM:SS)
-#SBATCH --mem=0                         # All memory on each node
-#SBATCH --exclusive                     # Full node usage
-#SBATCH --output=slurm-%j.out           # Output file
+#SBATCH --job-name=arun_test_ao
+#SBATCH --output=/projects/data/llmteam/arun/logs/%x_%j_%N_%t.log
+#SBATCH --error=/projects/data/llmteam/arun/logs/%x_%j_%N_%t.err
+#SBATCH --time=1:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:4
+#SBATCH --mem=80G
+#SBATCH --nodelist=iitmadras001
 
-# Load modules (adjust per cluster setup)
-module load cuda/12.1
-module load python/3.10
+# Activate conda environment
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate torch_ao
 
-# Activate your environment if needed
-# source ~/envs/myenv/bin/activate
-
-# -----------------------------
-# Torchrun configuration
-# -----------------------------
-
-# Number of GPUs per node
-GPUS_PER_NODE=8
-# Total number of nodes
-NNODES=$SLURM_NNODES
-# Rank of this node
-NODE_RANK=$SLURM_NODEID
-# Get first node hostname (used as rendezvous address)
-MASTER_ADDR=$(scontrol show hostnames "$SLURM_JOB_NODELIST" | head -n 1)
-# Master port (pick a free one)
-MASTER_PORT=29500
-
-echo "Nodes allocated: $SLURM_JOB_NODELIST"
-echo "Master node: $MASTER_ADDR"
-echo "Node rank: $NODE_RANK / $NNODES"
-
-# Launch distributed training
-torchrun \
-  --nnodes=$NNODES \
-  --nproc_per_node=$GPUS_PER_NODE \
-  --node_rank=$NODE_RANK \
-  --rdzv_backend=c10d \
-  --rdzv_endpoint=$MASTER_ADDR:$MASTER_PORT \
-  train.py --epochs 100 --batch-size 256
+# Run the training using torchrun for DDP
+torchrun --nproc_per_node=1 vit_h_14.py --dataset dataset --batch_size 2 --epochs 1
