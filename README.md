@@ -63,8 +63,18 @@ today, as they involve recognizing how goals, entities and quantities in the rea
      - Keep the batch size  small during the initial iterations and increase the size as the iterations increase (adjust warm-up lr accordingly)
      - Use hooks to debug the gradients, activation distribution. If you are using DDP, try dynamic tanh activation by removing batch/layer normalisation and see if the model performance improves
      - In LLMs, you may also vary the beam size while dealing with reasoning models. For example, page 6 in [the paper](https://arxiv.org/pdf/2103.03874)
+ 3. Be mindful while using Compose functions (such as `nn.sequential, compose,..`)
+     - We easily overlook the order of execution when we use compositional functions, such as the `compose` function in torchvision
+     - It introduces subtle performance degradation (which is difficult to debug)
+     - Say, you want to carry out **ablation studies**
+     - Assume that your model requires an image in 224x224. However, the image you have is 32x32.
+        - [resize --> ablation operations] is completely different from
+        - [ablation operations --> resize]
+        - Though both works (semantic error), they are totally two different things!
+        - The pre-processing pipeline is completely different
+        - Order does matter!
       
-## Setup Instructions to avoid subtle mistakes in the shared cluster and/or logins
+## Careful Setup Instructions
 1. After setting up the conda environment and activating it
     - Check the `which python` and ensure it is pointing to the current environment
     - Use `python -m pip install torch torchvision torchaudio` that safely uses the `pip` package from the current environment not from other existing environments by mistake.
