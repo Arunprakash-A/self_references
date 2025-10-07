@@ -25,6 +25,9 @@ observation, he described a formula for pricing an annuity that, expressed in mo
        - In 2022, many people noticed the advantage of scaling the model parameters, however, one could have also noticed that scaling the FLOPS (compute) also help the model. 
        - This is now called **test-time scaling** (Scaling the FLOPS)
     - The quote "Emergence is when _quantitative_ changes in a system result in _qualitative_ changes in behaviour" cited in the paper deeply resonates with me
+2. [Training with Verifiers](https://arxiv.org/pdf/2110.14168)
+      - **Comment:**, IMO, First paper that demonstrates (taking ideas from earlier researches) test-time compute is an alternative path to explore (the paper shows it for math reasoning)
+      - 6B model with increased compute (i.e., generating 100 solutions and verifying them) performs better than fine-tuning 175B model.
 2. [TorchAO: PyTorch-Native Training-to-Serving Model Optimization](https://openreview.net/attachment?id=HpqH0JakHf&name=pdf)
     - **Comment:** The end-to-end optimization of the LLM pipeline (training-finetuning-serving) was fragmented. This framework exactly addresses this major problem.
     - From the paper:
