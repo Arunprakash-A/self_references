@@ -1,5 +1,5 @@
 # Documenting learnings, ideas, interesting-insightful-helpful papers, blogs and scripts (for myself and the curious minds like you)
-## Books 
+## Online Books 
 1. [PATTERNS, PREDICTIONS, AND ACTIONS A story about machine learning](https://mlstory.org/pdf/patterns.pdf)
    - Surprised to learn the story behind the modern concept sitting at the centre of RL:'sum of expected discounted rewards`
       - Excerpt from the book: "Halley recognized that his table could be used to estimate the odds that a person of a certain age would die within the next year. Based on this
