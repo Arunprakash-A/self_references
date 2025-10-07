@@ -28,6 +28,7 @@ observation, he described a formula for pricing an annuity that, expressed in mo
 2. [Training with Verifiers](https://arxiv.org/pdf/2110.14168)
       - **Comment:**, IMO, First paper that demonstrates (taking ideas from earlier researches) test-time compute is an alternative path to explore (the paper shows it for math reasoning)
       - 6B model with increased compute (i.e., generating 100 solutions and verifying them) performs better than fine-tuning 175B model.
+      - However, it also demonstrates that naively increasing the compute (say, increasing the completions to 200) won't increase the performance. There are some sweet spots
 2. [TorchAO: PyTorch-Native Training-to-Serving Model Optimization](https://openreview.net/attachment?id=HpqH0JakHf&name=pdf)
     - **Comment:** The end-to-end optimization of the LLM pipeline (training-finetuning-serving) was fragmented. This framework exactly addresses this major problem.
     - From the paper:
