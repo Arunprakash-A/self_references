@@ -5,7 +5,8 @@
       - Excerpt from the book: "Halley recognized that his table could be used to estimate the odds that a person of a certain age would die within the next year. Based on this
 observation, he described a formula for pricing an annuity that, expressed in modern language, computes the sum of expected discounted payouts over the course of a person’s life starting from their current age".
 2. [The Alignment Problem](https://brianchristian.org/the-alignment-problem/)
-   - It is a must-read. Contains a lot of real-life incidents sharing the moments while AlexNet was being cooked, ethical aspects (and their importance), and limitations of models
+   - It is a must-read (of course, it is an AI book)
+   - Contains a lot of real-life incidents like sharing the moments while AlexNet was being cooked, ethical aspects (and their importance), and limitations of models
 
    
 
@@ -17,7 +18,7 @@ observation, he described a formula for pricing an annuity that, expressed in mo
 2. [Best practices guide](https://github.com/NVIDIA/apex/tree/master/examples/imagenet)
 
 ## Reinforcement Learning
-1. [Understanding Reinforcement Learning for Model Training,and future directions with GRAPE](https://arxiv.org/pdf/2509.04501)
+1. [Understanding Reinforcement Learning for Model Training, and future directions with GRAPE](https://arxiv.org/pdf/2509.04501)
    - Comment: Good read for anyone who has a good knowledge of LLM and wants to learn the role of RL algorithms
 
 
