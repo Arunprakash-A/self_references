@@ -48,6 +48,12 @@ quantization schemes may diverge from the ones used in previous steps with subtl
 financial news, calculating change in everyday transactions, and analyzing productivity in an organization. Solving such problems remains a key challenge for artificial intelligence (AI)
 today, as they involve recognizing how goals, entities and quantities in the real-world map into a mathematical formalization - [source](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1184/reports/6866023.pdf)).
 
+4. [Solving math word problems with process-and outcome-based feedback](https://arxiv.org/pdf/2211.14275)
+   - **Comment:** CoT(chain of thought) and its variants such as CoT-SC, ToT elicit reasoning ability only in really large language models of size 175B, 540B even 1.8TB.
+   - This is the first paper (afaik), demonstrating that using RL improves reasoning performance even for comparatively smaller language models
+   - Followed by, OpenAI also released a similar [paper](https://arxiv.org/pdf/2305.20050) on the MATH dataset
+   - Interestingly, GPT-4 O1 (likely) used this RL approach albeit with smaller models 
+
 ## Blogs
 1. [Deep Learning Is Hitting a Wall](https://nautil.us/deep-learning-is-hitting-a-wall-238440/) - 2022
    - [Tweet](https://x.com/karpathy/status/1971220449515516391) by Andrej Karpathy related to the article - 2025
