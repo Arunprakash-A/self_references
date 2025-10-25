@@ -22,6 +22,7 @@ observation, he described a formula for pricing an annuity that, expressed in mo
    - Comment: Good read for anyone who has a good knowledge of LLM and wants to learn the role of RL algorithms
 
 
+
 ## Papers
 1. [Emergent Abilities of Large Language Models](https://arxiv.org/pdf/2206.07682)
     - **Comment:** What really happens when we scale the model? Some abilities emerges. In-context learning ( great sample efficiency) is a commonly known ability.
@@ -30,7 +31,7 @@ observation, he described a formula for pricing an annuity that, expressed in mo
        - This is now called **test-time scaling** (Scaling the FLOPS)
     - The quote "Emergence is when _quantitative_ changes in a system result in _qualitative_ changes in behaviour" cited in the paper deeply resonates with me
 2. [Training with Verifiers](https://arxiv.org/pdf/2110.14168)
-      - **Comment:**, IMO, First paper that demonstrates (taking ideas from earlier researches) test-time compute is an alternative path to explore (the paper shows it for math reasoning)
+      - **Comment:**, IMO, First paper that demonstrates (taking ideas from earlier research), test-time compute is an alternative path to explore (the paper shows it for math reasoning)
       - 6B model with increased compute (i.e., generating 100 solutions and verifying them) performs better than fine-tuning 175B model.
       - However, it also demonstrates that naively increasing the compute (say, increasing the completions to 200) won't increase the performance. There are some sweet spots
 2. [TorchAO: PyTorch-Native Training-to-Serving Model Optimization](https://openreview.net/attachment?id=HpqH0JakHf&name=pdf)
@@ -42,7 +43,7 @@ using llama.cpp (GGML, 2025). In each step, the user may need to manually conver
 quantization schemes may diverge from the ones used in previous steps with subtle discrepancies
 
 3. [Solving Math Word Problems](https://aclanthology.org/D17-1088.pdf)
-    - **Comment:** Reasoning models are not just for solving complex mathematical equations, it is a foundational skill that enables the adoptation of LLMs in many areas which requires strong reasoning to make decisions.
+    - **Comment:** Reasoning models are not just for solving complex mathematical equations; it is a foundational skill that enables the adoption of LLMs in many areas that require strong reasoning to make decisions.
     - Math word problems form a natural abstraction to a range of quantitative reasoning skills that are often required of an autonomous agent to behave intelligently, such as understanding
 financial news, calculating change in everyday transactions, and analyzing productivity in an organization. Solving such problems remains a key challenge for artificial intelligence (AI)
 today, as they involve recognizing how goals, entities and quantities in the real-world map into a mathematical formalization - [source](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1184/reports/6866023.pdf)).
