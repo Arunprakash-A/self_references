@@ -71,6 +71,7 @@ today, as they involve recognizing how goals, entities and quantities in the rea
      - Keep the batch size  small during the initial iterations and increase the size as the iterations increase (adjust warm-up lr accordingly)
      - Use hooks to debug the gradients, activation distribution. If you are using DDP, try dynamic tanh activation by removing batch/layer normalisation and see if the model performance improves
      - In LLMs, you may also vary the beam size while dealing with reasoning models. For example, page 6 in [the paper](https://arxiv.org/pdf/2103.03874)
+       
  3. ERROR TYPE: SEMANTIC
      - Reason: Be mindful while using Compose functions (such as `nn.sequential, compose,..`)
      - We easily overlook the order of execution when we use compositional functions, such as the `compose` function in torchvision
@@ -83,7 +84,8 @@ today, as they involve recognizing how goals, entities and quantities in the rea
         - The pre-processing pipeline is completely different
         - Order does matter!
  5. ERROR TYPE: SEMANTIC,
-     - Be aware that " Gradescaler" from PyTorch is required only when you use "float16" not when using "bfloat16" as "bfloat16" has enough dynamic range! 
+     - Be aware that " Gradescaler" from PyTorch is required only when you use "float16" not when using "bfloat16" as "bfloat16" has enough dynamic range!
+ 6. Use Pytorch's in-built `vmap` for vectorising the operation over batch [doc](https://docs.pytorch.org/docs/stable/generated/torch.vmap.html)
 ## Careful Setup Instructions
 1. After setting up the conda environment and activating it
     - Check the `which python` and ensure it is pointing to the current environment
@@ -92,6 +94,7 @@ today, as they involve recognizing how goals, entities and quantities in the rea
     - For example, I set up a conda environment and installed all required packages.
     - I then used `ipython` for initial experimentation (that is the only option I have due to security concerns).
     - Everything was running smoothly, so I didn't doubt anything.
+
     - One day, the code threw an error. I spent half a day going through the documentation to fix it.
     - Nothing worked!
     - Finally, I realiszd, I didn't install `ipython` at all in `my environment`, therefore, it used the `ipython` from the base environment (sic!)
