@@ -93,6 +93,9 @@ today, as they involve recognizing how goals, entities and quantities in the rea
  5. ERROR TYPE: SEMANTIC,
      - Be aware that " Gradescaler" from PyTorch is required only when you use "float16" not when using "bfloat16" as "bfloat16" has enough dynamic range!
  6. Use Pytorch's in-built `vmap` for vectorising the operation over batch [doc](https://docs.pytorch.org/docs/stable/generated/torch.vmap.html)
+ 7. Error Type: Semantic
+     - Using ```nn.Sequential(nn.Linear)``` instead of just `nn.Linear` makes no difference operation-wise. However, we often forget to replicate the same architecture in THE SAME WAY during inference.
+     - For example, using `nn.Sequential(nn.Linear)` while training and `nn.Linear` while evaluating won't raise an error. We may find this out if the performance drops significantly!
 ## Careful Setup Instructions
 1. After setting up the conda environment and activating it
     - Check the `which python` and ensure it is pointing to the current environment
