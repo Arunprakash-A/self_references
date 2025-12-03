@@ -20,6 +20,7 @@ observation, he described a formula for pricing an annuity that, expressed in mo
 ## Reinforcement Learning
 1. [Understanding Reinforcement Learning for Model Training, and future directions with GRAPE](https://arxiv.org/pdf/2509.04501)
    - Comment: Good read for anyone who has a good knowledge of LLM and wants to learn the role of RL algorithms
+2. [Reinforcement Learning - An overview, by Kevin P.Murphy](https://arxiv.org/pdf/2412.05265)
 
 
 
