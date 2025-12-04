@@ -5,5 +5,5 @@
     - Hint: Out of distribution problem,
   
 3. Suppose we want to make a robust model. What are all the requirements?
-    - Hint: Definition for robustness first (sensitivity to small change in something!)
-    - Elaborating the experimental setup with evalaution suite
+    - Hint: Definition for robustness first (sensitivity of the performance of the model to small changes (in something)!)
+    - Elaborating the experimental setup with evaluation suite
