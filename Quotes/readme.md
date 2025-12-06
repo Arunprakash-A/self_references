@@ -16,13 +16,17 @@
       faster, more likely, etc. Probability tries to _measure more precisely_ than "more likely" or "less likely."
     - Thus all thought is, in some sense, modeling
     
-   - On Models
+ - On Models
       - A model is not _reality_, it merely helps to _explain some of our impressions of reality_. For example, for many purposes we assume that a table is "solid," yet in physics we often assume that it is made of molecules and is mainly "empty space." Different models may thus seem to contradict each other, yet we may use both in their appropriate places.
       - Selecting Criterion
           - Assumptions: Occam's razor (not an absolute truth)
           - Aesthetic: Some theories or nicer than others (depends on age, culture,...)
           - fruitfulness: Does the model suggest many new things to try?
-
+  - Randomness
+       - Randomness is a negative property; it is the absence of any pattern (we reject the idea that the *_absence of a pattern is a pattern_* and for set theory
+formalists this should be considered carefully)
+       - Randomness can never be proved, only the *_lack of it_* can be shown
+       - We use the absence of a pattern *_to assert that the past is of no help in predicting the future_*, the outcome of the next trial
   ## Mastery
    - Once you master a concept or a subject, you must _question_ the fundamental conceptions to push the field further
    - In ML
