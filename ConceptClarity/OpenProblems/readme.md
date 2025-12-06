@@ -6,3 +6,4 @@
 2. Knowledge Distillation
     - KD in a traditional setting does not distil robustness from one model to another (inductive bias even within the same family of models)
     - Transferring knowledge from a big model to a small model *_efficiently and effectively_* is the need of the hour in LLM
+    - From my experience, I believe that the activation functions play an important role.  
