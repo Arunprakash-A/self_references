@@ -27,6 +27,12 @@
 formalists this should be considered carefully)
        - Randomness can never be proved, only the *_lack of it_* can be shown
        - We use the absence of a pattern *_to assert that the past is of no help in predicting the future_*, the outcome of the next trial
+  - On Scholarly thinking
+       - If we wish to escape the medieval scholastic way of thinking then we must make a model, compute what to expect, and then verify that our model
+is (or is not) closely realized in practice (except when using "loaded dice")
+  - **Revisit**
+       - Rolling three dice and the interpretation of the distribution function of the sum of the outcomes (k = 3 to 18), page 60, example 2.4-4
+
   ## Mastery
    - Once you master a concept or a subject, you must _question_ the fundamental conceptions to push the field further
    - In ML
