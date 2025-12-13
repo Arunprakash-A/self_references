@@ -75,6 +75,7 @@ today, as they involve recognizing how goals, entities and quantities in the rea
                 "args": vars(args),
             }, best_ckpt)
       ```
+   - Though you freeze the parameters for some layers, it is a good practice to pass a filter to the optimizer , ```torch.optim.SGD(filter(lambda p: p.requires_grad, net.parameters())```. Otherwise, the optimiser will allocate memory to all parameters, although the gradients won't be computed for those parameters. This will save significant memory especially for really large models.
  2. What if the model underperforms?
      - Keep the batch size  small during the initial iterations and increase the size as the iterations increase (adjust warm-up lr accordingly)
      - Use hooks to debug the gradients, activation distribution. If you are using DDP, try dynamic tanh activation by removing batch/layer normalisation and see if the model performance improves
