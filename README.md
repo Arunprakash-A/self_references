@@ -7,6 +7,17 @@ observation, he described a formula for pricing an annuity that, expressed in mo
 2. [The Alignment Problem](https://brianchristian.org/the-alignment-problem/)
    - It is a must-read (of course, it is an AI book)
    - Contains a lot of real-life incidents like sharing the moments while AlexNet was being cooked, ethical aspects (and their importance), and limitations of models
+3. [The Intelligent Machinery by Turing](https://dn790006.ca.archive.org/0/items/turing1948/turing1948_text.pdf)
+   - Just sharing the pieces of information I loved from the book
+       - The analogy with the human brain is used as a **guiding principle**
+       - "We simply do not know of any creation which goes on creating itself in variety when the creator has withdrawn from it" <-- take on the definition of God :-)
+       - An unwillingness to admit the possibility that mankind can have any rivals in intellectual power. This occurs as much amongst intellectual people as amongst others: they have more to lose
+       - Paper Machine:
+          - It is possible to produce the effect of a computing machine by writing down a set of rules of procedure and asking a man to carry them out. Such a combination of a man with written instructions will               be called a paper Machine’. A man provided with paper, pencil, and rubber, and subject to strict discipline, is in effect a universal machine.
+      - Although the operations which can be performed by lcms include every ruleof-thumb process, the number of steps involved tends to be enormous. This is mainly due to the arrangement of the memory along the         tape
+          - Two facts which need to be used together may be stored very far apart on the tape. There is also rather little encouragement, when dealing with these machines, to condense the stored expressions at                all <-- Insight into the problem
+      - The sections: Man as a Machine and Education of Machinery are really good.
+
 
    
 
