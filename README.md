@@ -1,5 +1,5 @@
 # Documenting learnings, ideas, interesting-insightful-helpful papers, blogs and scripts (for myself and the curious minds like you)
-## Books 
+## Books/Chapters 
 1. [PATTERNS, PREDICTIONS, AND ACTIONS A story about machine learning](https://mlstory.org/pdf/patterns.pdf)
    - Surprised to learn the story behind the modern concept sitting at the centre of RL:'sum of expected discounted rewards`
       - Excerpt from the book: "Halley recognized that his table could be used to estimate the odds that a person of a certain age would die within the next year. Based on this
@@ -17,6 +17,15 @@ observation, he described a formula for pricing an annuity that, expressed in mo
       - Although the operations which can be performed by lcms include every ruleof-thumb process, the number of steps involved tends to be enormous. This is mainly due to the arrangement of the memory along the         tape
           - Two facts which need to be used together may be stored very far apart on the tape. There is also rather little encouragement, when dealing with these machines, to condense the stored expressions at                all <-- Insight into the problem
       - The sections: Man as a Machine and Education of Machinery are really good.
+4. [The Unreasonable Effectiveness of Mathematics in the Natural Sciences](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf)
+      - Introductory Joke: Why does pi appear everywhere despite its original invention as a ratio of circumference to the diameter?
+         - Appearance of pi in Gaussian distribution (something to do with the population :-))
+      - How come mathematics, as an independent study, finds its application in science and engineering?
+      - All mathematical concepts are learned from our experience of the real world, so how come imaginary numbers were invented?
+      - How do we define the laws of nature? regularity  in the complexity? order in chaos?
+      -  .... a miracle that in spite of the baffling complexity of the world, certain regularities in the events could be discovered
+      -  Laws are invariant across the universe
+      -  ... regularity which we are discussing is **independent** of so many conditions which could have an effect on it
 
 
    
