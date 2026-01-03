@@ -39,3 +39,9 @@ is (or is not) closely realized in practice (except when using "loaded dice")
      - All Inputs are typically viewed as vectors or points in a high-dimensional space 
      - Models: A mapping from inputs to outputs
      - NNs are function approximators
+## Casella Berger
+### Statistical Inference
+   - Say, we have i.i.d random variables from a Gaussian distribution
+      - sum all of it --> remains Gaussian (good student)
+      - square sum all of it --> Chi-square (it's ok if they like others)
+      - take a ratio --> Cauchy (bad, no moments)
