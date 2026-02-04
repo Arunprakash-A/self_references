@@ -73,7 +73,11 @@ today, as they involve recognizing how goals, entities and quantities in the rea
    - **Comment:** CoT(chain of thought) and its variants such as CoT-SC, ToT elicit reasoning ability only in really large language models of size 175B, 540B even 1.8TB.
    - This is the first paper (afaik), demonstrating that using RL improves reasoning performance even for comparatively smaller language models
    - Followed by, OpenAI also released a similar [paper](https://arxiv.org/pdf/2305.20050) on the MATH dataset
-   - Interestingly, GPT-4 O1 (likely) used this RL approach albeit with smaller models 
+   - Interestingly, GPT-4 O1 (likely) used this RL approach albeit with smaller models
+
+5. [REDUCING ACTIVATION RECOMPUTATION IN LARGE TRANSFORMER MODELS](https://proceedings.mlsys.org/paper_files/paper/2023/file/80083951326cf5b35e5100260d64ed81-Paper-mlsys2023.pdf)
+   - Activation memory scales up quadratically and encompasses a large amount of VRAM
+   - This paper provides a detailed breakdown of how to optimize the activation memory requirement under different training settings (parallelism)
 
 ## Blogs
 1. [Deep Learning Is Hitting a Wall](https://nautil.us/deep-learning-is-hitting-a-wall-238440/) - 2022
