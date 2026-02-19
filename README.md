@@ -122,6 +122,16 @@ today, as they involve recognizing how goals, entities and quantities in the rea
  7. Error Type: Semantic
      - Using ```nn.Sequential(nn.Linear)``` instead of just `nn.Linear` makes no difference operation-wise. However, we often forget to replicate the same architecture in THE SAME WAY during inference.
      - For example, using `nn.Sequential(nn.Linear)` while training and `nn.Linear` while evaluating won't raise an error. We may find this out if the performance drops significantly!
+ 8. Check the environment variables properly
+    - If you are using shared clusters, cross-check the environment variables such as HF_HOME, used by others
+    - It is safe to use the variables inside the script, put those lines at the very beginning of the script.
+         - ```python
+           import os
+            os.environ["HF_HOME"] = "cache_path"
+            os.environ["HF_HUB_OFFLINE"] = "1" # force off-line if the model weights are already loaded.
+            os.environ["HF_DATASETS_OFFLINE"] = "1"
+            os.environ["TRANSFORMERS_OFFLINE"] = "1"
+
 ## Careful Setup Instructions
 1. After setting up the conda environment and activating it
     - Check the `which python` and ensure it is pointing to the current environment
