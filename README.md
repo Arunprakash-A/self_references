@@ -84,6 +84,7 @@ today, as they involve recognizing how goals, entities and quantities in the rea
    - [Tweet](https://x.com/karpathy/status/1971220449515516391) by Andrej Karpathy related to the article - 2025
 ## Best practices
 1. **On Training:**
+    - Always ensure that, all model parameters are initialized inside the ```___init___``` constructor, not in the ```forward``` method. If the parameters are initialized in the ```forward``` method, those parameters will not be stored while using ```torch.save()```.
     - Save checkpoints with all intermediate informations, including the current `epoch`, so we can stop and resume training without breaking epoch numbers.
     - This avoids many subtle errors while generating final figures.
     - ```python
