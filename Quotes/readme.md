@@ -45,3 +45,7 @@ is (or is not) closely realized in practice (except when using "loaded dice")
       - sum all of it --> remains Gaussian (good student)
       - square sum all of it --> Chi-square (it's ok if they like others)
       - take a ratio --> Cauchy (bad, no moments)
+    
+## Misc
+ - Every product at your hand is the outcome of the "process". Quality of the process determines the quality of the Product.
+ 
